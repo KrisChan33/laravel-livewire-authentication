@@ -1,14 +1,17 @@
 <?php
 namespace App\Models;
 
+// use Illuminate\Contracts\Auth\MustVerifyEmail;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
+use Illuminate\Foundation\Auth\User as Authenticatable;
+use Illuminate\Notifications\Notifiable;
+use Laravel\Sanctum\HasApiTokens;
 use Illuminate\Database\Eloquent\Model;
 
 class User extends Model
 {
-    use HasFactory;
+    use HasApiTokens, HasFactory, Notifiable;
 
-    public $username, $password;
     /**
      * The table associated with the model.
      *
@@ -18,7 +21,8 @@ class User extends Model
     // protected $connection='mysql';
 
     protected $fillable = [
-        'username', 'password',
+        'username',
+        'password',
     ];
 
     protected $hidden = [
