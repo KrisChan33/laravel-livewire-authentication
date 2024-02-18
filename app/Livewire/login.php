@@ -1,15 +1,11 @@
 <?php
-
 namespace App\Livewire;
-
 use Illuminate\Foundation\Auth\User;
 use Livewire\Component;
-
 use function PHPSTORM_META\type;
 
 class Login extends Component
 {
-
     public $username = '';
     public $password = '';
 

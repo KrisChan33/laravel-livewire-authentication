@@ -7,7 +7,7 @@ class Registration extends Model
 {
     use HasFactory;
     protected $connection='mysql';
-    protected $table = 'user';
+    protected $table = 'users';
     protected $fillable = [
         'firstname',
         'lastname',

@@ -8,7 +8,7 @@ use Illuminate\Notifications\Notifiable;
 use Laravel\Sanctum\HasApiTokens;
 use Illuminate\Database\Eloquent\Model;
 
-class User extends Model
+class Loginf extends Model
 {
     use HasApiTokens, HasFactory, Notifiable;
 
@@ -17,8 +17,8 @@ class User extends Model
      *
      * @var string
      */
-    // protected $table = 'users';
-    // protected $connection='mysql';
+    protected $table = 'user';
+    protected $connection='mysql';
 
     protected $fillable = [
         'username',
