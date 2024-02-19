@@ -20,7 +20,7 @@ class Register extends Component
         $validatedData = $this->validate($this->rules()); // Validate the data
         USER::create($validatedData);// Use the Registrationmodel class
         $this->reset(['firstname', 'lastname', 'username', 'password', 'email', 'phone', 'address', 'city', 'state','role']);
-        return redirect()->to('/dashboard');
+        return redirect()->to('/login');
         
         // session()->flash(message:'User Successfully Registered');
         
@@ -41,7 +41,6 @@ class Register extends Component
             'role' =>''
         ];
     }
-
     public function render()
     {
         $users = User::all(); // Use the User model to get all users

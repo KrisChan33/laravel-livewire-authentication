@@ -15,7 +15,6 @@
     <div class=" my-auto mx-auto p-8 bg-white shadow-lg rounded-xl">
         <h1 class=" text-4xl mb-3 text-center font-extrabold text-blue-600"></i>Login</h1>
         <hr class="border-1.5 w-80">
-
 <div>
    <form class ="px-auto mx-auto flex justify-center"  wire:submit.prevent="login">
     <label class="justify-center">
@@ -56,5 +55,4 @@
 
     </div>
 </div>
-
 </main>
