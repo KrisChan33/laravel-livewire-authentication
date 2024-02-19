@@ -27,3 +27,9 @@ Route::get('/register', function () {
 Route::get('/dashboard', function () {
     return view('dashboard');
 })->name('dashboard');
+
+Route::middleware(['auth', 'admin'])->group(function () {
+    Route::get('/dashboard', 'DashboardController@index')->name('dashboard');
+    Route::get('admin/dashboard', '\App\SomeNamespace\AdminController@index');
+    
+})->name('livewire.admin.dashboard');
